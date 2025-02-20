@@ -163,7 +163,7 @@ export const AIAssistant = () => {
         className="h-14 bg-blue-600 rounded-t-xl flex items-center justify-between px-4 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-bold text-white">AI Travel Assistant</span>
+        <span className="font-bold text-white">ErrozBot</span>
         <span className={`transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>▼</span>
       </div>
       {isOpen && (
