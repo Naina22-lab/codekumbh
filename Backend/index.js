@@ -1,8 +1,10 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const cookieParser = require('cookie-parser');
-const connectDB = require('./utils/db.js');
+import express from 'express';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+import {connectDB} from './utils/db.js';
+import userRoute from './routes/user.route.js';
+
 dotenv.config({});
 
 
@@ -16,6 +18,9 @@ app.use(cors({
   origin: 'http://localhost:5173',
 credentials: true,
 }));
+
+app.use("/api/v1/user", userRoute);
+
 
 // Start server
 app.listen(PORT, () => {
