@@ -12,8 +12,6 @@ export const ChatInterface = () => {
     if (input.trim()) {
       setMessages([...messages, input])
       setInput("")
-      // Here you would typically send the message to your AI backend
-      // and then add the AI's response to the messages array
     }
   }
 

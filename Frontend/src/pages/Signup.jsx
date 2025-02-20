@@ -111,7 +111,7 @@ const Signup = () => {
 
             <Button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+              className="w-full bg-zinc-800 hover:bg-zinc-700 text-white"
               disabled={loading}
             >
               {loading ? 'Creating account...' : 'Sign up'}

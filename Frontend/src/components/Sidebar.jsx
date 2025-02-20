@@ -1,10 +1,11 @@
 import React from "react";
-import { Home, Map, Zap, Gift } from "lucide-react";
+import { Home, Map, Zap, Gift, MapPin } from "lucide-react";
 
 export const Sidebar = ({ activeTab, setActiveTab }) => {
   const tabs = [
     { id: "dashboard", icon: Home, label: "Dashboard" },
     { id: "planner", icon: Map, label: "Trip Planner" },
+    { id: "location", icon: MapPin, label: "Location" },
     { id: "deals", icon: Zap, label: "Deals" },
     { id: "gamification", icon: Gift, label: "Rewards" },
   ];

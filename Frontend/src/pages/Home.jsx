@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import { Sidebar } from "../components/Sidebar"
+import {Location} from "../components/Location"
 import { Header } from '../components/Header'
 import { Globe } from '../components/Globe'
 import { Dashboard } from '../components/Dashboard'
@@ -24,6 +25,7 @@ const Home = () => {
           <div className="flex-1 overflow-y-auto">
             {activeTab === 'dashboard' && <Dashboard />}
             {activeTab === 'planner' && <TripPlanner />}
+            {activeTab === 'location' && <Location/>}
             {activeTab === 'deals' && <Deals />}
             {activeTab === 'gamification' && <Gamification />}
           </div>

@@ -27,7 +27,7 @@ export const Dashboard = () => {
       </div>
       <div className="bg-gray-800 rounded-xl p-4">
         <h3 className="text-xl font-semibold mb-4">Budget Breakdown</h3>
-        <Doughnut data={budgetData} className="h-32" // Reduced to h-32 (8rem)
+        <Doughnut data={budgetData} className="h-32"
 />
       </div>
       <div className="bg-gray-800 rounded-xl p-4">
