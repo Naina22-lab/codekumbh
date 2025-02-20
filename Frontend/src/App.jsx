@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Sidebar } from "./components/Sidebar"
 import { Header } from './components/Header'
 import { Globe } from './components/Globe'
@@ -7,26 +8,22 @@ import { AIAssistant } from './components/AIAssistant'
 import { TripPlanner } from './components/TripPlanner'
 import { Deals } from './components/Deals'
 import { Gamification } from './components/Gamification'
+import Signup from './pages/Signup'
+import Login from './pages/Login'
+import Home from './pages/Home'
 
-export default function Home() {
-  const [activeTab, setActiveTab] = useState('dashboard')
+const App = () => {
+  const appRouter = createBrowserRouter([
+    { path: '/', element: <Home /> },
+    { path: '/register', element: <Signup /> },
+    { path: '/login', element: <Login /> },
+    { path: '/dashboard', element: <Dashboard /> },
+    { path: '/tripPlanner', element: <TripPlanner /> },
+    { path: '/deals', element: <Deals /> },
+    { path: '/gamification', element: <Gamification /> }
+  ])
 
-  return (
-    <div className="flex h-screen bg-gray-900 text-white overflow-hidden">
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="flex-1 flex flex-col">
-        <Header />
-        <div className="flex-1 flex overflow-hidden">
-          <Globe />
-          <div className="flex-1 overflow-y-auto">
-            {activeTab === 'dashboard' && <Dashboard />}
-            {activeTab === 'planner' && <TripPlanner />}
-            {activeTab === 'deals' && <Deals />}
-            {activeTab === 'gamification' && <Gamification />}
-          </div>
-        </div>
-      </div>
-      <AIAssistant />
-    </div>
-  )
+  return <RouterProvider router={appRouter} />
 }
+
+export default App
