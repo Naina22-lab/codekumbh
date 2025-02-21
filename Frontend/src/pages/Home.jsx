@@ -9,6 +9,7 @@ import { AIAssistant } from '../components/AIAssistant'
 import { TripPlanner } from '../components/TripPlanner'
 import { Deals } from '../components/Deals'
 import { Gamification } from '../components/Gamification'
+import {SOSService} from '../components/Sosbtn'
 
 const Home = () => {
 
@@ -28,6 +29,7 @@ const Home = () => {
             {activeTab === 'location' && <Location/>}
             {activeTab === 'deals' && <Deals />}
             {activeTab === 'gamification' && <Gamification />}
+            {activeTab === 'SOS' && <SOSService />}
           </div>
         </div>
       </div>

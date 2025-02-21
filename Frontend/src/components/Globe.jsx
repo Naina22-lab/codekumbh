@@ -22,9 +22,9 @@ export const Globe = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     mountRef.current.appendChild(renderer.domElement);
 
-    const geometry = new THREE.SphereGeometry(5, 64, 64);
+    // Adjusted segments for more spacious grid lines
+    const geometry = new THREE.SphereGeometry(5, 32, 32);
     const textureLoader = new THREE.TextureLoader();
-
 
     const baseTexture = textureLoader.load(
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZEBFbDrCTBzHCFl-Qkd1Zpa-SqzK4BSkm0Q&s"
@@ -32,7 +32,7 @@ export const Globe = () => {
 
     const material = new THREE.MeshPhongMaterial({
       map: baseTexture,
-      color: new THREE.Color(0x4a90e2), 
+      color: new THREE.Color(0x1a2b4c), // Dark Navy Blue
       transparent: true,
       opacity: 0.9,
     });
@@ -40,19 +40,20 @@ export const Globe = () => {
     const globe = new THREE.Mesh(geometry, material);
     scene.add(globe);
 
+    // Adjusted for more spaced-out wireframe grid
     const wireframeGeometry = new THREE.WireframeGeometry(geometry);
     const wireframeMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 1 });
     const wireframe = new THREE.LineSegments(wireframeGeometry, wireframeMaterial);
-    scene.add(wireframe); 
+    scene.add(wireframe);
 
-    
-    const ambientLight = new THREE.AmbientLight(0x4a90e2, 0.5); 
+    // Adjusted lighting for a darker effect
+    const ambientLight = new THREE.AmbientLight(0x1a2b4c, 0.3); 
     scene.add(ambientLight);
 
-    const hemiLight = new THREE.HemisphereLight(0x4a90e2, 0x000000, 1); 
+    const hemiLight = new THREE.HemisphereLight(0x1a2b4c, 0x000000, 0.8); 
     scene.add(hemiLight);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
     directionalLight.position.set(5, 5, 5);
     scene.add(directionalLight);
 
@@ -69,8 +70,8 @@ export const Globe = () => {
     // Animation Loop
     const animate = () => {
       requestAnimationFrame(animate);
-      globe.rotation.y += 0.005; // Rotate the globe
-      wireframe.rotation.y += 0.005; // Rotate wireframe grid with the globe
+      globe.rotation.y += 0.005;
+      wireframe.rotation.y += 0.005;
       controls.update();
       renderer.render(scene, camera);
     };

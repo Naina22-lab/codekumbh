@@ -1,5 +1,6 @@
 import React from "react";
-import { Home, Map, Zap, Gift, MapPin } from "lucide-react";
+import PropTypes from 'prop-types';
+import { Home, Map, Zap, Gift, MapPin, AlertTriangle } from "lucide-react";
 
 export const Sidebar = ({ activeTab, setActiveTab }) => {
   const tabs = [
@@ -8,6 +9,7 @@ export const Sidebar = ({ activeTab, setActiveTab }) => {
     { id: "location", icon: MapPin, label: "Location" },
     { id: "deals", icon: Zap, label: "Deals" },
     { id: "gamification", icon: Gift, label: "Rewards" },
+    { id: "SOS", icon: AlertTriangle, label: "SOS" }
   ];
 
   return (
@@ -26,4 +28,9 @@ export const Sidebar = ({ activeTab, setActiveTab }) => {
       ))}
     </aside>
   );
+};
+
+Sidebar.propTypes = {
+  activeTab: PropTypes.string.isRequired,
+  setActiveTab: PropTypes.func.isRequired,
 };
