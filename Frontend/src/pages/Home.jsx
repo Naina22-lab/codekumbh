@@ -26,6 +26,7 @@ const Home = () => {
                         {activeTab === 'planner' && <TripPlanner />}
                         {activeTab === 'location' && <Location />}
                         {activeTab === 'deals' && <Deals />}
+                        {activeTab === 'SOS' && <SOSService />}
                         {activeTab === 'gamification' && <Gamification />}
                     </div>
                 </div>
