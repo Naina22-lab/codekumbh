@@ -12,31 +12,27 @@ import { Gamification } from '../components/Gamification'
 import {SOSService} from '../components/Sosbtn'
 
 const Home = () => {
+    const [activeTab, setActiveTab] = useState('dashboard');
 
-    const [activeTab, setActiveTab] = useState('dashboard')
-  return (
-    <>
-    <div className="flex h-screen bg-gray-900 text-white overflow-hidden">
-      
-      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <div className="flex-1 flex flex-col">
-        <Header />
-        <div className="flex-1 flex overflow-hidden">
-          <Globe />
-          <div className="flex-1 overflow-y-auto">
-            {activeTab === 'dashboard' && <Dashboard />}
-            {activeTab === 'planner' && <TripPlanner />}
-            {activeTab === 'location' && <Location/>}
-            {activeTab === 'deals' && <Deals />}
-            {activeTab === 'gamification' && <Gamification />}
-            {activeTab === 'SOS' && <SOSService />}
-          </div>
+    return (
+        <div className="flex h-screen bg-gray-900 text-white overflow-hidden">
+            <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+            <div className="flex-1 flex flex-col">
+                <Header />
+                <div className="flex-1 flex overflow-hidden">
+                    {activeTab !== 'dashboard' && <Globe />}
+                    <div className="flex-1 overflow-y-auto">
+                        {activeTab === 'dashboard' && <Dashboard />}
+                        {activeTab === 'planner' && <TripPlanner />}
+                        {activeTab === 'location' && <Location />}
+                        {activeTab === 'deals' && <Deals />}
+                        {activeTab === 'gamification' && <Gamification />}
+                    </div>
+                </div>
+            </div>
+            <AIAssistant />
         </div>
-      </div>
-      <AIAssistant />
-    </div>
-    </>
-  )
-}
+    );
+};
 
-export default Home
+export default Home;
