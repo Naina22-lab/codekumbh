@@ -4,7 +4,7 @@ import { Home, Map, Zap, Gift, MapPin, AlertTriangle } from "lucide-react";
 
 export const Sidebar = ({ activeTab, setActiveTab }) => {
   const tabs = [
-    { id: "dashboard", icon: Home, label: "Dashboard" },
+    { id: "dashboard", icon: Home, label: "Home" },
     { id: "planner", icon: Map, label: "Trip Planner" },
     { id: "location", icon: MapPin, label: "Location" },
     { id: "deals", icon: Zap, label: "Deals" },
