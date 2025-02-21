@@ -8,30 +8,30 @@ const link = 'https://plus.unsplash.com/premium_photo-1714051660720-888e8454a021
 const mustVisitPlaces = [
   {
     name: "Paris, France",
-    image: link,
+    image: 'https://plus.unsplash.com/premium_photo-1661919210043-fd847a58522d?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: "The city of love, known for the Eiffel Tower and exquisite cuisine.",
     budget: "Rs2000 - Rs3000",
   },
   {
     name: "New York, USA",
-    image: link,
+    image: 'https://plus.unsplash.com/premium_photo-1714051660720-888e8454a021?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: "The city that never sleeps, with iconic landmarks and vibrant culture.",
     budget: "Rs2500 - Rs3500",
   },
   {
     name: "Santorini, Greece",
-    image: link,
+    image: 'https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     description: "Beautiful blue-domed churches and ocean views",
     budget: "Rs4500 - Rs5000",
   },
 ];
 
 const trendingLocations = [
-  { name: "Santorini, Greece", image: link, description: "Beautiful blue-domed churches and ocean views" },
-  { name: "Bali, Indonesia", image: link, description: "Tropical paradise with serene beaches and temples" },
-  { name: "Dubai, UAE", image: link, description: "Luxury shopping, ultramodern architecture, and nightlife" },
-  { name: "Venice, Italy", image: link, description: "Romantic canals and historic architecture" },
-  { name: "Sydney, Australia", image: link, description: "The Opera House and stunning harbor views" },
+  { name: "Santorini, Greece", image: 'https://plus.unsplash.com/premium_photo-1661963145672-a2bd28eba0fb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: "Beautiful blue-domed churches and ocean views" },
+  { name: "Bali, Indonesia", image: 'https://plus.unsplash.com/premium_photo-1668883189152-d771c402c385?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: "Tropical paradise with serene beaches and temples" },
+  { name: "Dubai, UAE", image: 'https://plus.unsplash.com/premium_photo-1661962769667-a159071a31cd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: "Luxury shopping, ultramodern architecture, and nightlife" },
+  { name: "Venice, Italy", image: 'https://images.unsplash.com/photo-1568039884582-ae3c5f59e6f6?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: "Romantic canals and historic architecture" },
+  { name: "Sydney, Australia", image: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', description: "The Opera House and stunning harbor views" },
 ];
 
 export const Dashboard = () => {
